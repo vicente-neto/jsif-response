@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size:10vw;
+        }
+        .aberto {background-color: #1a72e6;}
+        .fechado {background-color: #ff5252;}
+    </style>
+</head>
+    <body id="corpo" class="fechado">
+        <div class="container text-center m-auto p-5">
+            <p id="paragrafo">Fechado</p>
+        </div>
+    </body>
+    <script>
+        var corpo = document.getElementById("corpo");
+        var paragrafo = document.getElementById("paragrafo");
+        paragrafo.addEventListener("click",function() {
+            if(corpo.classList.contains("aberto")){
+                corpo.classList.remove("aberto");
+                corpo.classList.add("fechado");
+                paragrafo.innerHTML = "Fechado";
+            }else{
+                corpo.classList.remove("fechado");
+                corpo.classList.add("aberto");
+                paragrafo.innerHTML = "Aberto";
+            }
+        });
+    </script>
+</html>
